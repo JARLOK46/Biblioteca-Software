@@ -1,6 +1,6 @@
 package Clases;
 
-public class CrearLibro {
+public class Libro {
     private String titulo;
     private String autor;
     private String isbn;
@@ -8,7 +8,7 @@ public class CrearLibro {
     private int anioPublicacion;
     private int copiasDisponibles;
 
-    public CrearLibro(
+    public Libro(
             String titulo,
             String autor,
             String isbn,
@@ -36,8 +36,8 @@ public class CrearLibro {
             throw new IllegalArgumentException("El año de publicación no es válido");
         }
 
-        if (copiasDisponibles <= 0) {
-            throw new IllegalArgumentException("Debe existir al menos una copia");
+        if (copiasDisponibles < 0) {
+            throw new IllegalArgumentException("Las copias disponibles no pueden ser negativas");
         }
 
         this.titulo = titulo;
@@ -46,5 +46,29 @@ public class CrearLibro {
         this.genero = genero;
         this.anioPublicacion = anioPublicacion;
         this.copiasDisponibles = copiasDisponibles;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public int getAnioPublicacion() {
+        return anioPublicacion;
+    }
+
+    public int getCopiasDisponibles() {
+        return copiasDisponibles;
     }
 }
