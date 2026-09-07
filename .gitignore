@@ -32,3 +32,16 @@ bin/
 
 ### ATL ###
 .atl/
+
+### Build artifacts ###
+build/
+target/
+.gradle/
+
+### Compiled ###
+*.class
+*.iml
+
+### Logs ###
+*.log
+logs/
