@@ -1,0 +1,13 @@
+.atl/
+.idea/
+out/
+build/
+target/
+bin/
+.gradle/
+
+*.class
+*.iml
+
+*.log
+logs/
